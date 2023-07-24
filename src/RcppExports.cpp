@@ -22,6 +22,15 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// demo_class
+void demo_class();
+RcppExport SEXP _tutorial_demo_class() {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    demo_class();
+    return R_NilValue;
+END_RCPP
+}
 // test
 void test(size_t seed, NumericVector nn1, arma::vec nn2, std::vector<double> nn3);
 RcppExport SEXP _tutorial_test(SEXP seedSEXP, SEXP nn1SEXP, SEXP nn2SEXP, SEXP nn3SEXP) {
@@ -38,6 +47,7 @@ END_RCPP
 
 static const R_CallMethodDef CallEntries[] = {
     {"_tutorial_arma_dist", (DL_FUNC) &_tutorial_arma_dist, 1},
+    {"_tutorial_demo_class", (DL_FUNC) &_tutorial_demo_class, 0},
     {"_tutorial_test", (DL_FUNC) &_tutorial_test, 4},
     {NULL, NULL, 0}
 };

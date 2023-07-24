@@ -5,6 +5,10 @@ arma_dist <- function(X) {
     .Call(`_tutorial_arma_dist`, X)
 }
 
+demo_class <- function() {
+    invisible(.Call(`_tutorial_demo_class`))
+}
+
 test <- function(seed, nn1, nn2, nn3) {
     invisible(.Call(`_tutorial_test`, seed, nn1, nn2, nn3))
 }

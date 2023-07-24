@@ -3,8 +3,8 @@
 #include "RcppArmadillo.h"
 #include <iostream>
 #include <random>
-#include "rcpparma_hello_world.h"
-
+#include "test.h"
+#include "myclass.h"
 // [[Rcpp::depends(RcppArmadillo)]]
 
 // [[Rcpp::export]]
